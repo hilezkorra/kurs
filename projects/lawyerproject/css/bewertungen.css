@@ -1,0 +1,84 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.star{
+    color:gold;
+    font-size: 200%;
+    padding: 0;
+    margin: 0;
+}
+main img{
+    width:150px;
+    border-radius: 100%;
+    border:2px solid white;
+    -webkit-box-shadow:0px 0px 0px 5px black;
+            box-shadow:0px 0px 0px 5px black;
+}
+article{
+    background: silver;
+    border-radius: 40px;
+    padding:40px;
+    width: 800px;
+    margin: 20px auto;
+}
+article h6{
+    font-size:130%;
+    padding: 0;
+    margin: 0;
+}
+article h6:before{
+    content:"@" " ";
+    color:black; 
+}
+.date{
+    padding-left:30px;
+    text-decoration: underline;
+    font-size:70%;
+    text-align: right;
+}
+div{
+  background-color: silver;  
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+main input, main label{
+    margin:10px;
+}
+main label{width: 200px;}
+main label[for="message"]{
+    float:left;
+}
+input[type="submit"]{
+    padding:10px;
+}
+@media screen and (max-width:950px){
+    article{
+    border-radius: 20px;
+    padding:20px;
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    }
+    article img{
+    max-width: 100px;
+    }
+    article{
+        width:300px;
+    }
+    textarea{
+        width:50%;
+    }
+    main div{width:80%;}
+}
+@media screen and (max-width:700px){
+    textarea{
+        width:90%;
+        margin:0;
+    }
+}

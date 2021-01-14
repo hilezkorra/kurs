@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="start.css">
+  <title>Tabreiternavigation mit 2 Grafiken</title>
+  <style>
+    html{
+     /* word-wrap:break-word; */
+     -ms-hyphens: auto;     /* microsoft browsers(IE) */
+     -o-hyphens:auto;       /* opera browser */
+     -webkit-hyphens:auto;    /* chromium browsers(chrome, edge) */
+     -moz-hyphens:auto;     /* mozilla browsers(firefox usw.) */
+     hyphens:auto;
+    }
+    nav{
+      text-align:center;
+      border:0;
+      margin:0;
+      padding:0;
+      /* Verschiebung um optische Überlagerung zu erreichen */
+      position: relative;
+      top:1px;
+      /* bottom:-1px; */
+    }
+    nav ul{
+      margin-bottom:0;
+      list-style:none;
+      /* Clearen mit overflow , gleichzeitige Nutzung der Faux Columntechnik*/ 
+      overflow:hidden;
+    }
+    nav li{
+      /* display:list-item; */
+      /* Abstände zwischen interktiven Elementen lt. WCAG2*/
+       margin:0 2px;
+      /* background:#ccc; */
+      /* width:150px; */
+      color:#000;
+      /* border:1px solid #333; */
+      float:left;
+      /* padding:0 2px; */
+      background: url(gfx/bu_li.gif) no-repeat left top;
+      padding-bottom:150px;/* gleichmäßige Ausdehnung in Höhe der Hintergrundgrafik*/
+      margin-bottom:-140px;/* negativer Einzug in Höhe der erzwungenen Ausdehnung oder weniger für Abstand*/
+      
+    }
+
+    nav a{
+      /* 
+      Bei dem Einsatz von hintergrundgrafiken sollte immer eine Hintergrundfarbe angegeben werden damit die Lesbarkeit von darauf liegenden Inhalten auch sichergestellt ist wenn die Grafik nicht geladen werden kann. Bei Alphatransparenten  ist dies teilweise schwer umsetzbar. Dann muss die Lesbarkeit durch geeignete Textfarbe sichergestellt werden.
+      */
+      background:url(gfx/bu_re.gif) no-repeat right top;
+      /* margin:0 2px; */
+      color:inherit;
+      display:block;
+      padding:10px 1.5em;
+      /* width:180px; */
+      /* Faux Columns - vorgetäuschte gleichlangen Spalten */
+      padding-bottom:150px;/* gleichmäßige Ausdehnung in Höhe der Hintergrundgrafik*/
+      margin-bottom:-140px;/* negativer Einzug in Höhe der erzwungenen Ausdehnung oder weniger für Abstand*/
+      
+    }
+    section{
+      /* margin-top:-1px; */
+      margin-top:0;
+      padding-top:0;
+    }
+
+    /* clear*/
+    /* entfällt durch clear mit overflow */
+    /* nav ul:after{
+      content:"";
+      display:table;
+      clear:both;
+    } */
+
+
+      /* Zustände */
+    /* standard textlinks*/
+    a{color:#360;}
+    a:focus,a:hover{
+      text-decoration:line-through;
+    }
+
+/* Hauptnavi */
+    /* nav a:hover, nav a:focus{
+      background-image:url("gfx/tabreiter_hover.gif");
+      text-decoration:none;
+    } */
+    nav li:hover, nav li:focus{
+      background-image:url(gfx/bu_li_hover.gif);
+    }
+    nav li:hover a,nav li:focus a {
+      background-image:url(gfx/bu_re_hover.gif);
+      text-decoration:none;
+    }
+
+    /*.active{
+       background:#fff;; */
+      /* color:#333; */
+      /* border-bottom-color:#fff; 
+    }*/
+    /* .active a, .active:hover a{
+      background-image:url("gfx/tabreiter_active.gif");
+    } */
+
+    .active, .active:focus, .active:hover{
+      background-image:url(gfx/bu_li_active.gif);
+    }
+    
+   .active a,.active:hover a,.active:focus a{
+      background-image:url(gfx/bu_re_active.gif);
+     color:#333;
+    }
+
+
+
+    /* C2A - Call to Action */
+    .btn{display:block;margin:0.5em 0;padding:1em;background:#060;color:#fff;display:table;border-radius:5px;text-decoration:none;border:1px solid #360;transition:border-color .4s;
+    background: #bfd255; /* alte Browser ohne Gradient */
+    background: -moz-linear-gradient(top,#72aa00 0%,#360 50%,#72aa00 100%);/* Alte FF (->15)*/
+    background: -webkit-linear-gradient(top, #72aa00 0%,#360 50%,#72aa00 100%);/* Alte Chromium (->25) und Safari ( ->5) */
+    background: linear-gradient(to bottom,  #72aa00 0%,#360 50%,#72aa00 100%); /* Standard lt. w3.org*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72aa00', endColorstr='#360',GradientType=0 ); /* alte IE (-> 9)als svg Filter  */
+    }
+    .btn:hover{
+    background:#72aa00; color:#212121;border-color:transparent;
+    box-shadow:inset 0 0 2px #fff;
+    text-decoration:none;
+    }
+    summary{color:#360;
+      text-decoration:underline;
+    }
+    summary:hover{
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+  <header><!--role="banner" - Kopfbereich - Seitenkopf/kopfzeile-->
+    <h1>Tabreiternavigation mit zwei Grafiken</h1>
+    <!-- <nav> </nav> -->
+  </header>
+  <nav><!--role="navigation" -  Navigationsbereich - Hauptnavigation-->
+    <!-- ul>li*4>a>{Link $} -->
+    <ul>
+      <li tabindex=0><a href="" title="link 1">Link 1<br>blubb</a></li>
+      <li tabindex=0 class="active"><a href="">Link 2</a></li>
+      <li tabindex=0><a href="">Donaudampfschifffahrtgesellschaft</a></li>
+      <li tabindex=0><a href="">Link 4</a></li>
+    </ul>
+
+  </nav>
+
+ <!--<main></main>role="main"--> 
+  <section><!-- role="region" - Seitenabschnitt/ Seitenbereich-->
+    <!-- <header>
+    </header> -->
+    <h2>Überschrift für section</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit nostrum consectetur nisi aut hic mollitia minima illo. Saepe alias repellat nisi eligendi quaerat aspernatur eos quae dolore facere non!</p>
+    <a href="" title="setzen wenn Linktext nicht aussagekräftig">mehr &hellip;</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolor ab non, laborum beatae soluta quidem veritatis saepe dolorum necessitatibus reprehenderit eos vero, consequatur neque distinctio, iste cumque assumenda quibusdam.</p>
+    <details><!--Zusammenfassung / Nachtrag / Zusatzinformation-->
+      <summary>Aria Landmark Roles</summary><!--Überschrift für details-->
+        <p>Landmark-Roles sind Informationen, für Screenreeder und andere sinnstiftende Mechnismen, über Inhaltliche Aufteilung der Seitenbereiche. Eine Übersicht zu den Aria-Landmark-Roles die den HTML5-Outline-Elementen zugewiesen sind finden sie unter: <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html" title="Landmarkroles an html5 elementen und fortführende Informationen" hreflang="en" target="_blank" class="btn">Aria-Landmark-Role</a></p>
+    </details>
+    <!-- <footer>
+    </footer> -->
+    
+  </section>
+
+  <footer><!--role="contentinfo" fußbereich/Fußzeile-->
+    Tabreiternavigation mit zwei Grafiken
+  </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="start.css"> 
+  <title>horizontales Flyout-Menü - Grundprinzip</title>
+  <!-- HTMl5 Elemente für alte Browser erzeugen-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <link rel="stylesheet" href="start.css">
+  <style>
+      nav ul{
+        padding:0;
+        margin:0;
+        list-style:none;
+      }
+      nav li{
+          float:left;
+          min-width: 160px;
+          background: #1373f0;
+          line-height: 16px;                    /* alligns text horizontally in li */
+          text-align: center;
+          border: 3px solid white;
+      }
+
+      nav li li{
+          clear:both;
+      }
+      nav a{
+          display: block;
+          color: white;
+          height: 32px;                 /* makes the text fit in the middle of li vertically */
+          text-decoration: none;
+          padding-top:10px;
+      }
+
+      nav ul:after{
+          content:"";
+          display:table;
+          clear:both;
+      }
+
+      nav li ul{
+          position: absolute;
+          left:-9999em;                 /* this makes the sub tabs dissapear(in nav) */
+      }
+
+      nav li:hover >ul{
+            left:auto;              /* this summons first sub tab in nav */
+            margin-left: -3px;
+      }
+      nav li ul li:hover ul{
+          left:auto;
+          margin-left:10.1em;       /* this summons the 2.nd layer of sub tabs */
+          margin-top:-2.8em;
+      }
+      nav li ul li:hover:last-child >ul{
+        margin-left:-10.3em;                /* this makes the last child tab show up to the left */
+        margin-top: -2.8em;
+      }
+      nav li:hover{
+        background: rgb(11, 15, 245);   /* changes background of li when you hover over it */
+      }
+/*       @media screen and (max-width:980px){
+          nav li:last-child li:hover> ul{
+              margin-left:10.1em;
+          }
+          
+      } */
+  </style>
+</head>
+ 
+<body>
+<header>
+    <h1>horizontale Flyout Navigation - Grundprinzip</h1>
+</header>
+
+<nav>
+    <ul>
+      <li tabindex="0"><a href="" title="Link 1">link 1</a></li>
+      <li tabindex="0"><a href="" title="Link 2" >link 2</a>
+        <ul>
+          <li><a href="" title="Link 2.1">link 2.1</a></li>
+          <li><a href="" title="Link 2.2" >link 2.2</a>
+            <ul>
+              <li><a href="#" title="2.2.1">Link 2.2.1</a></li>
+              <li><a href="#" title="2.2.2">Link 2.2.2</a></li>
+          </ul>
+          </li>
+          <li><a href="" title="Link 2.3">link 2.3</a></li>
+
+        </ul>
+      </li>
+      <li tabindex="0"><a href="" title="Link 3">link 3</a></li>
+      <li tabindex="0"><a href="" title="Link 4">link 4</a>
+        <ul>
+          <li><a href="" title="Link 4.1">link 4.1</a></li>
+          <li><a href="" title="Link 4.2">link 4.2</a>
+            <ul>
+                <li><a href="#" title="4.2.1">Link4.2.1</a></li>
+                <li><a href="#" title="4.2.2">Link4.2.2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+<section> 
+  <h2>Horizontale flyout Navigation - Grundprinzip</h2>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+</section>
+
+<footer>
+    horizontale Flyout Navigation
+</footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+h1{   
+   font-family: "Courier New", Courier, monospace; /*Schriftfamilie Überschrift */ 
+   font-size:200%; margin:0;color:#060;   
+ }  
+
+body{ 
+   font-family: Verdana, Geneva, sans-serif;/*Schriftfamilie restliche Elemente */
+   color: #666; 
+}
+aside,article,footer,section,div,header,nav{ 
+   border:1px solid gray;margin:5px;padding:10px;
+}
+body>header{ 
+position:relative;
+}
+
+body:hover>header:before{
+content:"!";
+position:absolute;
+right:3%;
+bottom:-20px;
+font-size:1.4em;
+padding:10px;
+background:#FF9;
+border:1px solid rgb(204,0,0);
+color:rgb(204,0,0);
+}
+
+body:hover>header:hover:after{
+content:"Codeschnipsel";
+position:absolute;
+right:3%;
+bottom:-20px;
+font-size:1.4em;
+padding:10px;
+background:#FF9;
+border:1px solid rgb(204,0,0);
+color:rgb(204,0,0);
+}
+
+footer { 
+   border:none;border-top:1px solid grey;background-color:#060;
+   text-align:center;color:#fff;
+}
+
+ 

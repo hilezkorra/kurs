@@ -1,0 +1,104 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.left img{
+    float:left;
+    max-width: 700px;
+}
+.right img{
+    float:right;
+    max-width: 700px;
+}
+.left{
+    background: grey;
+    color: white;
+    border-radius: 200px 100px 100px 0;
+    overflow: hidden;
+    padding-right:20px;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    text-align: justify;
+}
+.right{
+    margin-top:20px;
+    background: grey;
+    color: white;
+    border-radius: 100px 0px 200px 100px;
+    overflow: hidden;
+    padding-left:20px;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    text-align: justify;
+}
+h2{
+    text-align: center;
+    background-color: silver;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.alt{
+    display: none;
+}
+
+@media screen and (max-width:1490px){
+    main{
+        width: auto;
+    }
+}
+@media screen and (max-width:1325px){
+    .left img:not(.alt), .right img:not(.alt){
+        display: none;
+    }
+    .left img, .right img{
+        max-width: 300px;
+    }
+    .left, .right{
+        padding: 35px;
+        border-radius: 100px 0px 100px 100px;
+    }
+    .alt{
+        display: inline-block;
+        border-radius: 100px;
+        margin: 25px;
+        margin-top: 70px;
+        -webkit-box-shadow: 20px 10px white;
+                box-shadow: 20px 10px white;
+    }
+}
+@media screen and (max-width:750px){
+    .left img, .right img{
+        float: none;
+        max-width: 300px;
+    }
+    .alt{
+    float: none;
+    width:100%;
+    display: block;
+    margin: 10px auto;
+    padding: 0;
+    }
+    .left h2, .right h2{
+        clear:both;
+    }
+
+}
+article{
+    margin-top:20px;
+}
+h1{
+    text-align: center;
+    background: grey;
+    color: white;
+}
+p{
+    padding:10px;
+}

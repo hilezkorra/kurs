@@ -1,0 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+#main form label{
+    font-size: 80%;
+    display: inline-block;
+}
+#main form input{
+    margin: 0px 5px;
+}
+#main form{
+    top:5%;
+}
+#main label h2{
+    top:5%;
+}
+#avatar label i{
+    font-size:50%; 
+}

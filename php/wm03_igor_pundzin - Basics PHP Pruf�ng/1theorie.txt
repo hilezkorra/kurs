@@ -1,0 +1,20 @@
+1.
+    a)Ein network Protocoll ist ein Begriff für mehrere Gesetze die bestimmen wie daten, zwischen die 
+    verschieden Geräten in den Netzwerk ubertragen werden. Im Wesentlichen ermöglicht es 
+    verschiedenen Geräten, miteinander zu kommunizieren.
+
+    b)Ein 'Header' ist ein teil eines documentes oder 'data packet' die bestimmte Daten 
+    enthält(wie zB.'Metadata' oder andere Infos erforderlich für prozesierung von die Haupt Daten).
+    Im IT es ist ofter benutzt als eine Begriff für alle zusätzlichen/ergänzenden Daten die 
+    kommen vor den Hauptdaten.
+
+    Metadaten- Daten die beschreiben und geben Information über anderen Daten.
+
+    c)Specialen UTF-8 Buchstaben&Symbole haben verschiedene Byte großen. Strlen messt den Bytes.
+    Wann wir einen genauen/richtigen Resultat wöllen wir mussen entweder eine UTF-8 decode
+    Funktion('strlen(utf8_decode())') nutzen oder 'mb_strlen()'. 
+
+    'utf8_decode()'  - convertiert alle Buchstaben/Symbole die nicht ISO-8859-1 sind zum '?' und
+    das reicht aus wann mann nur die länge einen String wissen möchte.
+
+    'mb_strlen()'- alle Funktionen mit 'mb_' kann die UTF-8 scriften erkennen.

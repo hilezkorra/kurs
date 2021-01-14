@@ -1,0 +1,1 @@
+Es ist möglich eigene Schriftarten einzubinden erste Recherchen ergaben das dies mit @font-face möglich sein soll.

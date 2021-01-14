@@ -1,0 +1,147 @@
+==========================================================================
+0) Allgemeines (8 Punkte)
+==========================================================================
+
+   1) Erstelle einen Ordner namens "wm03_" + dein Vor- und Nachname.
+      Vor und Nachname sollen durch einen Unterstrich getrennt sein.
+      Verwende keine Sonderzeichen, Umlaute oder Leerzeichen!
+      Verwende nur Kleinbuchstaben.
+      zB wm03_john_mclane
+
+   2) Alle Dateien, die du in der Klausur erstellst und verwendest,
+      müssen in diesem Ordner liegen.
+
+   3) Verwende in allen Dateien, die PHP enthalten, strikte Typisierung.
+
+   4) Verwende in allen Funktionen, die du schreibst, Type Hints
+      für Parameter und Rückgabewerte, soweit dies möglich ist.
+
+   5) Erzeuge stets valides HTML!!!!!
+
+
+==========================================================================
+2) Calc-my-Weihnachtsfeier (90 + 20 Punkte)
+==========================================================================
+
+    Lege einen Ordner namens "cmw" an. Alle Dateien dieser Aufgabe
+    müssen in diesem Ordner liegen.
+
+    Einleitung:
+    -----------
+    Bald ist es wieder soweit. Es ist August und jeder kann es spüren.
+    Weihnachten steht vor der Tür.
+
+    Wie jedes Jahr, wird die Zucker und Rohr GmBH Bielefeld
+    auch 2020 wieder eine üppige Benefiz-Weihnachtsfeier veranstalten.
+
+    Und wie jedes Jahr, wird diese Feier nicht nur das Geld vieler
+    Spender anlocken, sondern auch eine ganze Menge kosten.
+
+    Um der Einnahmen und Ausgaben Herr zu werden, wünscht sich
+    Zucker und Rohr eine kleine Webseite, auf der die Finanzen
+    eingetragen werden können.
+
+    Zu jedem Eintrag sollen Zweck, Betrag, und Datum gespeichert
+    werden, und ob es sich um eine Einzahlung oder Auszahlung handelt.
+
+
+    Beispiellayout:
+    ---------------
+    Calc my Weihnachtsfeier         | Login | Register |
+
+    Neuen Eintrag erstellen (form)
+    | Zweck                   | Betrag   |
+    | _input_________________ | _input__ |
+    | Speichern |
+
+    Ein- und Ausgaben
+    | Zweck                        |    Betrag   |     |
+    |------------------------------|-------------|-----|
+    | Spende Mama                  |      5,00€  | E X | (E: Edit Button, X: Delete)
+    | CDÜ Anonym                   |    100,00€  | E X | (Einzahlung: grün)
+    | 1000L Piratenrum             | -14999,00€  | E X | (Auszahelung: rot)
+    | Elon Musk Rum Fund           |  14999,01€  | E X | (Einzahlung: grün)
+    |------------------------------|-------------|-----|
+    |                       Total  |    105,01€  |
+
+    (Tip: Denkt daran, dass wir Login und Register schon implementiert
+          haben. Bitte das Rad nicht neu erfinden.
+    )
+
+    Spezifikation:
+    --------------
+
+    --READ
+    Die App soll eine nach Datum sortierte Liste aller Einträge
+    anzeigen. Einzahlungen (Spenden) sollen grün, Ausgaben rot
+    angezeigt werden.
+
+    Unter dieser Liste soll die Gesamtsumme aller Ein- und
+    Ausgaben angezeigt werden.
+
+    --CREATE
+    Jeder soll Einträge in der Liste erstellen können.
+    Man braucht dazu keinen Login.
+
+    --DELETE
+    --UPDATE
+    Nur ein eingelogter Benutzer soll Einträge löschen und
+    editieren können. Sowohl Betrag als auch Zweck sollen
+    editierbar sein. 
+
+    Anmerkung:
+    Ja, die App benötigt wirklich nur EINE Tabelle, plus eine
+    Tabelle für den Login.
+    
+    Sondersupertip: Eine Auszahlung ist auch nur
+                    eine negative Einzahlung
+
+    Sicherheit:
+    Achte bei Benutzereingaben auf die üblichen Sicherheitsaspekte,
+    also die Bereinigung von Ausgaben an den Browser (htmlspecialchars)
+     und von Anfragen an die Datenbank (mysqli_escape_string und (int)).
+
+    Validierung und alte Werte:
+    Beachte außerdem die üblichen Aspekte der UX (User Exerience).
+    Also: Trage bei Validierungsfehlern alte Werte wieder in
+          ihre Felder ein und zeige dem Benutzer die
+          Validierungsfehler an.
+    
+    10 Bonuspunkte: Die Liste kann nach Datum, Zweck oder Betrag
+                    sortiert werden.
+
+    10 Bonuspunkte: Die Liste kann so gefiltert werden, dass NUR
+                    die Einnahmen oder NUR die Ausgaben angezeigt
+                    werden (mit der entsprechenden Gesamtsumme).
+
+    Denke daran, einen Datenbankdump (export) in das Verzeichnis
+    zu legen, das du gezippt abgibst.
+    (In phpmyadmin die Datenbank auswählen und auf Export klicken)
+
+
+==========================================================================
+3) Abgabe (2 Punkte)
+==========================================================================
+
+  1) Packe den gesamten Ordner, den du in Aufgabe 0) erstellt hast.
+     Das Format muss zip, 7zip oder tgz sein.
+     
+     Die ZIP-Datei heißt also:
+       wm03_dein_name.7z  oder
+       wm03_dein_name.zip oder
+       wm03_dein_name.tgz
+     (dein_name ist natürlich durch deinen Namen zu ersetzen!)
+
+  2) Überprüfe, ob:
+     - wirklich alle benötigten Dateien im ZIP sind.
+     - du den richtigen Ordner gepackt hast
+     - die Zip-Datei den richtigen Namen hat
+     - der Datenbankdump dabei ist!!!
+
+  3) Lade diese Zip-Datei im eCampus hoch.
+
+
+Insgesamt können in diesem Test 120 von 100 Punkten erzielt werden.
+
+Viel Erfolg!
+Ho ho ho.

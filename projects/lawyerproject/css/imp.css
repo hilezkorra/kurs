@@ -1,0 +1,92 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.right40{
+    display: inline-block;
+    width: 40%;
+    margin-left: 10px;
+    border-radius: 10px 150px 150px 10px;
+    background: silver;
+    }
+    .right40 form>label{
+        display: inline-block;
+        min-width: 90px;
+        padding:10px 0;
+    }
+    .right40 form{
+        margin-left: 20px;
+        text-align: left;
+    }
+    .left40{
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        background: silver;
+        border-radius: 150px 10px 10px 150px;
+        height: 513px;
+    }
+    #prob{
+        display: block;
+    }
+    main div textarea{
+        margin-left: 10px;
+    }
+    input[type="reset"]{
+        padding: 5px; margin: 10px; min-width: 100px;
+    }
+    input[type="submit"]{
+        padding: 10px; margin: 10px; min-width: 100px;
+    }
+    #contact h1{
+        display: block;
+        text-align: center;
+        font-size: 220%;
+    }
+    #contact p{
+        display: block;
+        text-align: center;
+    }
+    #contact{
+        background: silver;
+        border-radius: 100px;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    #contact img{
+        border-radius: 20px 200px 20px 200px;
+        -webkit-box-shadow:0px 0px 50px white;
+                box-shadow:0px 0px 50px white;
+        max-width: 500px;
+    }
+    .wrap{
+        text-align: center;
+    }
+    .require:before{
+        content:"*" " ";
+        color:red; 
+    }
+    @media screen and (max-width:1255px){
+        
+        .right40, .left40{
+            display: block;
+            width:80%;
+            margin:20px auto;
+        }
+    }
+    @media screen and (max-width:685px){
+        textarea{
+            width:200px;
+        }
+        .left40, .right40{
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #contact img{
+            max-width:70%
+        }
+    }

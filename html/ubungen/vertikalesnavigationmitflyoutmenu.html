@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vertikales Menü mit Ausklappfunktion</title>
+  <link rel="stylesheet" href="start.css">
+  <style>
+   
+    /* einfacher zweispalter, nicht adaptiv */
+    nav{float:left;
+    width:10em;
+    margin-top:0;
+    padding:0;
+    background:#ccc;
+    border:0;
+    }
+
+    section{
+    margin-left:11em;
+    }
+
+    footer{
+      clear:both;
+    }
+  /* Navi */
+  nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:10em;
+  }
+  nav li{
+    background:hotpink;
+    /* möglich falls megadropdown nicht gewünscht*/
+    /*position:relative;*/
+    /* Abstände zwischen interaktiven Elementen 4px*/
+    padding:2px 0 1px;
+    border-bottom:1px solid #333;
+  }
+
+  nav li:last-child{
+    border-bottom:0;
+  }
+
+  nav a{display:block;
+  text-decoration:inherit;
+  /* Höhe oder Line-height angeben zum berechnen des vertikalen Einzugs alternativ bei mehrzeiligkeit line-height anpassen*/
+  /* height:1em; */
+  line-height:1.3em;
+  /* Überdehnt den Anker, breiter als umschließendes Elternelement (padding + width = 11em ul hat selbst 10em). Damit ist die Erreichbarkeit beim ausklappen der untergeordneten Liste gewährleistet*/
+  padding:0.5em;
+  width:10em;
+  /* Überdehnen des Ankers Funktioniert nur im klassischen Boxmodell.
+     Alternativ kann dies auch mit border am innenliegenden Ul gelöst werden.
+  */
+  }
+
+  /* Verstecken*/
+  nav li ul{
+    /* display:none; */
+    /* visibility: hidden; */
+    position:absolute;
+    left:-9999em;
+    /* Z-index am ausgeklappten element ist ggf. notwendig wenn das Elternelement position:relativ besitzt. Nachfolgende, sich im normalen Elementfluss befindliche Element, überlagern durch die natürliche Stapelreihenfolge ggf. das eingeblendete Element je nach optischer gewünschter Darstellung. */ 
+  }
+
+  /* hervorzaubern */
+  /*nav a:hover+ul*/
+  nav li:hover >ul, nav li:focus >ul{
+    left:auto;
+   /* z-index:1; */
+    margin-left:11em; /* horizontal verschieben/nebeneinanderstellen */
+    margin-top:-2.3em;/* auf optische gleiche Höhe des Elternelementes verschieben */
+    /* Border Oder Padding können zum verschieben genutzt werden, je nach gewünschter Darstellung. Beide Eigenschaften beanspruchen jedoch platz und überlagern somit gegf. vorangegangene Elemente. Damit diese wieder erreicht werden können (z.B. anklickbar sind) müssen diese ggf. mit z-index in der optischen Stapelreihenfolge nach vorn gebracht werden 
+    */
+    /* border-left:1em solid transparent; */
+    /*width:100%;*/
+    /*right:0;*/
+  }
+
+  /* optischen Versatz verhindern */
+  nav li li:first-child{
+    margin-top:-2px;
+  }
+  /* zustände*/
+  nav li:hover{
+    background:rgb(88, 114, 161);
+  }
+  /* aktiven Menüpunkt kennzeichnen */
+  /* .active  / .active . active */
+  .active,.active:hover, .active:focus{background:purple;}
+  .active>a, .sub.active>a,.active:hover>a, .active:focus>a{
+  color:lemonchiffon;
+}
+  /* Ausklappbarkeit visualisieren */
+  .submenu:before{
+    content:">" " ";
+  }
+
+.sub{position:relative;/* wenn Megadropdown relative am li vermeiden*/}
+
+.sub:after{
+    content:"";
+    border:6px solid transparent;
+    border-left:purple 6px solid;
+    border-right:none;
+    position:absolute;
+    right:0.5em;
+    top:.7em;
+    transition:all 0.4s;
+  }
+
+.sub:hover:after{
+  border-left-color:rgb(88, 114, 161);
+  border-width:1.2em;
+  top:-1px;right:-1.19em;
+  z-index:1;  
+}
+
+/* Farbanpassung aktiver Menüpunkt bei Ausklappbarkeit class active und sub*/
+.active:after{
+  border-left-color:lemonchiffon;
+}
+.active:hover:after, .active:focus:after{
+  border-left-color:purple;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>vertikale Navigation mit Flyout-Menü</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li tabindex="0"><a href="" title="Link 1">link 1</a></li>
+      <li tabindex="0" class="sub active">
+        <a class="submenu" href="" title="Link 2">link 2</a>
+        <ul>
+          <li><a href="" title="Link 2.1">link 2.1</a></li>
+          <li class="sub" ><a href="" title="Link 2.2">link 2.2</a>
+            <ul>
+              <li><a href="" title="Link 2.2.1">link 2.2.1</a></li>
+              <li><a href="" title="Link 2.2.2">link 2.2.2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li tabindex="0"><a href="" title="Link 3">link 3</a></li>
+      <li tabindex="0" class="sub">
+        <a href="" title="Link 4">link 4</a>
+        <ul>
+          <li><a href="" title="Link 4.1">link 4.1</a></li>
+          <li class="sub" ><a href="" title="Link 4.2">link 4.2</a>
+            <ul>
+              <li><a href="" title="Link 4.2.1">link 4.1.1</a></li>
+              <li><a href="" title="Link 4.2.2">link 4.1.2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+
+  <section>
+    <h2>Überschrift für Section</h2>
+    <h3 style="color:hotpink" title="das verwendete Farbschema dient lediglich der Visualisierung und ergab sich aus Teilnehmervorschlägen.">Farbschema nur bedingt Barrierefrei!!</h3>
+    <p>Weitere Informationen zu Lesbarkeit von Texten und Visualisierung von Ereigniszuständen <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" title="Kontrastverhältnisse WCAG2.0" target="_blank" hreflang="en">WCAG2.0 - Kontrastverhältnisse</a></p> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+      provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+        provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+  </section>
+
+  <footer>
+    vertikales Menü mit Ausklappfunktion
+  </footer>
+</body>
+
+</html>

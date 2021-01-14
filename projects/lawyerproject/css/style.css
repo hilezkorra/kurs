@@ -1,0 +1,381 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: white;
+}
+header{
+    display:block;
+    padding: 0;
+    margin:0;
+    position:relative;
+    top:-8px;
+    text-align: center;
+    background-image: -webkit-gradient(linear , left top, left bottom , from(silver) , to(grey));
+    background-image: -o-linear-gradient(silver , grey);
+    background-image: linear-gradient(silver , grey);
+    -webkit-box-shadow: 5px 10px 50px black;
+            box-shadow: 5px 10px 50px black;
+    height:120px;
+    width:104%;
+    left: -2%;
+    padding-bottom: 0;
+    margin-bottom:0;
+}
+main{
+    width: 1440px;
+    margin:0 auto;
+    padding: 10px 20px;
+    padding-top: 40px;
+    background: whitesmoke;
+    -webkit-box-shadow:0 10px 30px 0 silver, 0 -10px 30px 0 silver;
+            box-shadow:0 10px 30px 0 silver, 0 -10px 30px 0 silver;
+}
+
+@media screen and (max-width:1490px){
+    main{
+        width: auto;
+    }
+}
+#logo{
+    margin-top: -50px;
+}
+/* Navigation */
+nav ul li ul{
+    position: absolute;
+    left: -9999em;
+}
+nav ul li{
+    display: inline-block;
+    width: 160px;
+    background: silver;
+    border:2px solid #000;
+    height:25px;
+    -webkit-box-shadow: 0px 10px 30px black;
+            box-shadow: 0px 10px 30px black;
+}
+nav{
+    margin-top: -30px;
+    width: 100%;
+    text-align: center;
+}
+
+#opennav, #closenav, #menu{
+    display:none;
+}
+nav ul{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    display:block;
+    color: #000;
+    font-size: 120%;
+}
+/* für alte browsern und nur für .active in neuen*/
+nav ul li:hover, nav ul li:focus{
+    background: grey;
+    -webkit-transition: background 0.3s ease-in;
+    -o-transition: background 0.3s ease-in;
+    transition: background 0.3s ease-in;
+}
+/* für neue browser */
+nav ul>li:hover:not(.active):not(.subli), nav ul>li:focus:not(.active):not(.subli){
+    height: 70px;
+    background: grey;
+    border-radius: 20px 20px 0 0;
+    border:2px solid grey;
+    -webkit-transition: height 0.3s ease-in, background 0.4s ease-in,border-radius 0.6s ease-in;
+    -o-transition: height 0.3s ease-in, background 0.4s ease-in,border-radius 0.6s ease-in;
+    transition: height 0.3s ease-in, background 0.4s ease-in,border-radius 0.6s ease-in;
+    -webkit-animation-name: navlihover;
+            animation-name: navlihover;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+    margin-bottom: 45px;
+    position: relative;
+    bottom: 45px;
+}
+nav ul li:hover a, nav ul li:focus a{
+    color: #fff;
+    -webkit-transition: color 0.3s ease-in;
+    -o-transition: color 0.3s ease-in;
+    transition: color 0.3s ease-in;
+    height:70px;
+}
+.active{
+    height: 70px;
+    position: relative;
+    top: -45px;
+    border-radius: 20px 20px 0 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+@-webkit-keyframes navlihover{
+    0% {left:0; top:0px;}
+   100%{left:0px; top:-45px;} 
+}
+@keyframes navlihover{
+    0% {left:0; top:0px;}
+   100%{left:0px; top:-45px;} 
+}
+.subli{
+    border:2px solid silver;
+}
+/* rotatin subnav arrow */
+nav li a b{
+    float: right;
+    margin-right: 5%;
+}
+nav li a:hover b{
+    color: white;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+nav li:hover a b, nav li:focus a b{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;    
+
+}
+/* SUB nav-in */
+nav li:hover >ul{
+    position: relative;
+    float: left; 
+    left:auto;
+    left: -2px;
+    -webkit-animation: subnavin;
+            animation: subnavin;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+}
+@-webkit-keyframes subnavin{
+    0% {left:-1000px; top:0px;}
+   100%{left:-2px; top:0px;} 
+}
+@keyframes subnavin{
+    0% {left:-1000px; top:0px;}
+   100%{left:-2px; top:0px;} 
+}
+/*footer*/
+footer{
+    display: block;
+    text-align: center;
+    width: 104%;
+    margin-left: -2%;
+}
+footer ul{
+    list-style-type: none;
+    background: grey;
+    margin:0;
+    padding: 0;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+footer ul li{
+    display: inline-block;
+    min-width: 100px;
+    color: #fff;
+    font-size: 120%;
+}
+footer ul li:hover a, footer ul li:focus a{
+  color: #000;
+  text-decoration: underline;
+  background: silver;
+  -webkit-transition: color 0.8s;
+  -o-transition: color 0.8s;
+  transition: color 0.8s;
+}
+
+/* Navi when screen is lees wide than 1000px (makes navi smaller) */
+
+@media screen and (max-width: 1000px){
+    nav ul li{
+        width:100px;
+        height: 20px;
+    }
+    nav ul li a{
+        font-size: 80%;
+    }
+    .active{
+        height: 65px;
+    }
+    nav ul>li:hover a:not(.active):not(.subli), nav ul>li:focus a:not(.active):not(.subli){
+        height: 65px;
+    }
+    nav ul>li:hover:not(.active):not(.subli), nav ul>li:focus:not(.active):not(.subli){
+        height:65px;}
+}
+
+/* Navi less wide than 650px (turns navi into hamburger) */
+
+@media screen and (max-width: 650px){
+    body{
+        padding-top: 45px;
+
+    }
+    header{
+        background: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        left:0;
+
+    }
+
+    nav{
+        position:absolute;
+        left: -9999em;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+    /*button open nav*/
+    #opennav{
+        display:block;
+        position: fixed;
+        left:0;
+        top:0;
+        width:100%;
+        background:silver;
+    }
+    input[type="checkbox"]:checked ~ #opennav{
+        position: absolute;
+        left: -9999em;
+    }
+    #opennav img{
+        max-height: 50px;
+    }
+    input[type="checkbox"]:checked ~ #closenav{
+        display:block;
+        position: fixed;
+        left:0;
+        top:0;
+        width:100%;
+        background:grey;
+    }
+    nav ul li{
+        display: block;
+        width:100%;
+        position: static;
+        -webkit-animation-duration: 0s;
+                animation-duration: 0s;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        border: 2px solid silver;
+    }
+    @-webkit-keyframes subnavin{
+        0% {left:-3px; top:-300px;}
+       100%{left:-3px; top:0px;} 
+    }
+    @keyframes subnavin{
+        0% {left:-3px; top:-300px;}
+       100%{left:-3px; top:0px;} 
+    }
+    /* I needed to overwrite previous height value from nav li and class wasn't working*/
+    #fix1:hover, #fix2:hover, #fix3:hover, #fix4:hover, #fix5:hover, #fix6:hover, #fix1:focus, #fix2:focus, #fix3:focus, #fix4:focus, #fix5:focus, #fix6:focus{
+        height: 20px;
+        position: static;
+        clear: both;
+        float: none;
+        margin-bottom:0;
+        border-radius: 0;
+    }
+    #fix3:hover, #fix3:focus{
+        margin-bottom: 45px;
+        -webkit-transition: margin 0.3s ease-in, background 0.3s ease-in;
+        -o-transition: margin 0.3s ease-in, background 0.3s ease-in;
+        transition: margin 0.3s ease-in, background 0.3s ease-in;
+    }
+    #fix4:hover, #fix4:focus{
+        margin-bottom: 93px;
+        -webkit-transition: margin 0.3s ease-in;
+        -o-transition: margin 0.3s ease-in;
+        transition: margin 0.3s ease-in;
+    }
+    nav li ul li a{font-size: 1px;}
+    nav li:hover ul li a{font-size: 80%;
+    -webkit-transition: font-size 0.4s ease-in;
+    -o-transition: font-size 0.4s ease-in;
+    transition: font-size 0.4s ease-in;}
+    nav ul>li:hover .subul, nav ul>li:focus .subul{
+        position: static;
+        margin-right:3px;    
+    }
+    #subul1{
+        height:48px;
+    }
+    #subul2{
+        height:96px;
+    }
+    nav ul>li:hover a, nav ul>li:focus a{
+        max-height: 20px;
+        position: static;
+        margin:0;
+        float: none;
+    }
+    nav li:hover > ul, nav li:focus > ul{       
+        position: static;
+        float: none;
+        height: auto;
+    }
+    @-webkit-keyframes portraitnav{
+        0% {left:0; top:-200px;}
+       100%{left:0px; top:59px;} 
+    }
+    @keyframes portraitnav{
+        0% {left:0; top:-200px;}
+       100%{left:0px; top:59px;} 
+    }
+    nav ul{
+        width: 100%;
+    }
+    .active{
+        height:20px;
+        position: static;
+        border-radius: 0;
+        background: #505050;
+    }
+    .active a{color: white;}
+    input[type="checkbox"]:checked ~ nav{
+        position:fixed;
+        left: 0;
+        top:65px;
+    }
+    footer ul li a{
+        font-size:60%;
+    }
+    footer ul li{
+        min-width: 40px;
+    }
+    .split{
+        width: 5px;
+        font-size: 50%;
+    }
+    
+    
+}
+.clear:after{
+    content: "";
+    display: table;
+    clear: both;
+    
+}

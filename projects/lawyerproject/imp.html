@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Musterman&Musterfrau Rechtsanwälte GmbH</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/imp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+    <img src="img/logo.png" alt="Musterman &amp; Musterfrau Anwälte Logo" id="logo">
+    <input type="checkbox" id="menu"> 
+    <label for="menu" id="opennav"><img src="img/Hamburger_icon.svg" alt="Navigation open button"></label>
+    <label for="menu" id="closenav"><img src="img/Hamburger_icon.svg" alt="Navigation close button"></label>
+    <nav>
+        <ul>
+            <li id="fix1"><a href="index.html">Startseite</a></li>
+            <li id="fix2"><a href="uberuns.html">Über uns</a></li>
+            <li id="fix3"><a href="anwalte.html">Anwälte <b>►</b></a>
+                <ul class="subul" id="subul1">
+                    <li class="subli"><a name="musterman" href="anwalte.html#mustermann">Max Musterman</a></li>
+                    <li class="subli"><a name="musterfrau" href="anwalte.html#musterfrau">Mai Musterfrau</a></li>
+                </ul>
+            </li>
+            <li id="fix4"><a href="rechtsgebiete.html">Rechtsgebiete <b>►</b></a>
+                <ul class="subul" id="subul2">
+                    <li class="subli"><a name="first" href="rechtsgebiete.html#first">Zauberrecht</a></li>
+                    <li class="subli"><a name="second" href="rechtsgebiete.html#second">Demirecht</a></li>
+                    <li class="subli"><a name="third" href="rechtsgebiete.html#third">Fliegenrecht</a></li>
+                    <li class="subli"><a name="fourth" href="rechtsgebiete.html#fourth">Polarbearrecht</a></li>
+                </ul>
+            </li>
+            <li id="fix5"><a href="bewertungen.html">Bewertungen</a></li>
+            <li class="active" id="fix6"><a href="imp.html">Impressum</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <div id="contact">
+            <h1>Impressum</h1>
+           <p>
+            Haben Sie Fragen oder rechtliche Probleme, stehen wir Ihnen 
+            jederzeit zur Verfügung. Über die unten angegebenen Telefonnummern 
+            und die E-Mail Adresse sind wir stets zu erreichen.
+            </p> 
+            <img src="img/impressum.jpg" alt="eine schöne Fraue spricht am Handy">
+        </div>
+<div class="wrap">        
+        <div class="left40">
+            <address>
+            <b>Adresse:</b><br><br>
+
+            Musterman und Musterfrau Anwälte <br>
+            Greed Straße f66 <br>
+            666-666 Krater von Derweze 
+            </address>
+            <p>
+            Sie finden uns direkt neben der eingang zur der Höle.
+            </p>
+            <p>
+            Tel.: <a href="tel:0666–666-666-0">0666 – 6 66 66 60</a>
+            </p>
+            <p>
+            Tel.: <a href="tel:0666-DUMMY-NUMMER">0666 – DUMMY NUMMER</a>
+            </p>
+            <p>
+            Fax: 0666 – 6 66 66 61
+            </p>
+            <p>
+            E-Mail: <a href="mailto:greedincarnate@thisisnotarealemail.com">greedincarnate@thisisnotarealemail.com</a> 
+            </p>
+            <img src="img/logo.png" alt="Musterman und Musterfrau Anwälte Logo">
+        </div>
+        
+        <div class="right40">
+        <form action="action_page.php" method="get">
+        <label for="name" class="require"> Vorname:</label>
+        <input type="text" name="name" id="name" class="important" required aria-required="true"><br>
+        <label for="surname">Nachname:</label> 
+        <input type="text" id="surname" name="surname"><br>
+        <label for="email" class="require"> Email:</label> 
+        <input type="email" id="email" name="email" class="important" required aria-required="true" placeholder="beispiel@domain.com"><br>
+
+        <h4>Zum welchen rechtlichen Gebiet gehört ihren Problem?</h4>
+            <input type="radio" id="liebe" name="rechtprob" value="Zauberrecht" required aria-required="true">
+            <label for="liebe">Zauberrecht</label><br>
+            <input type="radio" id="atmen" name="rechtprob" value="Demirecht">
+            <label for="atmen">Demirecht</label><br>
+            <input type="radio" id="fliegen" name="rechtprob" value="Fliegenrecht">
+            <label for="fliegen">Fliegenrecht</label><br>
+            <input type="radio" id="bear" name="rechtprob" value="Polarbearrecht">
+            <label for="bear">Polarbearrecht</label><br>
+            <input type="radio" id="no" name="rechtprob" value="nicht sicher / etwas anderes">
+            <label for="no">Nicht sicher/etwas anderes</label>
+        <br>
+
+        <label for="message" class="require"> Nachricht:</label><br>
+        <textarea name="message" id="message" class="important" required aria-required="true" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Senden" style="padding: 10px; margin: 10px;"><br>
+        <input type="reset">
+      </form>
+    </div>
+</div>
+        
+    </main>
+    <footer>
+        <ul>
+            <li><a href="imp.html">Impressum</a></li>
+            <li>|</li>
+            <li><a href="agb.html">AGB</a></li>
+            <li>|</li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

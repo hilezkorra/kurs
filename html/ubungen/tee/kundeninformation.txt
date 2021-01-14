@@ -1,0 +1,37 @@
+﻿Die Firma "London Fine Teas" möchte von Ihnen eine HTML5 Webseite erstellt haben. Der Kunde hat einige Bilder und ein Layout-Image bereitgestellt.
+Bei der zu erstellenden Seite selbst handelt es sich um ein Template für die spätere Website.
+
+Der Titel der Seite soll "Moriar Tea" sein..
+Das Template der zu erstellenden Webseite besteht aus mehreren Unterseiten.
+-Startseite
+-- Tradition
+-- Teas (ggf. 2 Seiten, siehe mitgelieferte PSD)
+-- Our Store (vorerst Baustellenseite (hier entsteht.., demnächst .. o.ä,) keine Kundenvorlage vorhanden)
+
+
+Erstellen Sie eine separate css datei (z.B.: style.css) und binden Sie diese korrekt ein.Die CSS Datei soll sich in einem eigenen Ordner mit dem Namen css befinden.
+
+Es ist freigestellt an geeigneten stellen sinnstiftende HTML5 Elemente zu verwenden.
+Bisher bekannte Semantik sollte jedoch beachtet werden.
+Ebenso muss die Webseiten-Darstellung in alten Browsern funktionieren.
+
+Die Inhalte selbst stehen noch nicht komplett fest, Our Store ist vorerst nur ein Platzhalter für den späteren Shop diese ist als BlankoSeite anzulegen.
+Alle Seiten müssen über die Navigation selbst erreichbar sein! 
+Die Navigation enthält dabei 4(Logo ist kein teil der Navigationsliste) bzw 5 (Logo teil der Navigationsliste) Listenpunkte.
+
+Folgende Angaben hat der Kunde vorgegeben:
+- Seitentitel der Startseite soll "Moriar Tea - what people brew" sein
+- eigene Schriftartart für alle Inhalte (Bell MT) - (mitgeliefertes Verzeichnis, Hinweis beachten)
+- Schriftgröße ist nicht festgelegt sollte aber zur grafischen Vorlage passen
+- die Linktextfarbe ist mit #0F132C festegelegt
+- Grafiken für angebotene Teesorten (die Seite Teas besteht vorerst ggf. aus 2 Seiten)
+- Seitengrafiken und Logo
+- Die Seite soll die geforderten Zielgruppen nicht vor unnötige Hürden Stellen (Bildschirmgeräte(Desktop) und Screenreader tauglich)!
+
+Für den späteren Seitenbetrieb vorgesehen und vorerst optional:
+- Teesorten Übersicht als anklickbarer Slider , damit ein neu laden der Seite entfallen kann 
+- Benutzbarkeit und Darstellung auf verschiedenen Endgeräten soll gewährleistet sein
+
+
+
+
